@@ -1,6 +1,10 @@
 module.exports = (lineman) ->
   config:
     watch:
+      options:
+          spawn: false
+          livereload: true
+      
       js:
         files: ["<%= files.js.vendor %>", "<%= files.js.app %>"]
         tasks: ["concat:js"]
